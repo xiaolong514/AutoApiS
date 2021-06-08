@@ -61,6 +61,6 @@ jobs:
         git add .
         git commit -m "update new refresh_token" -a
     - name: Push changes
-      uses: taozhiyu/AutoApiS@master
+      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
