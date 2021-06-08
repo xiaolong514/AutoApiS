@@ -6,7 +6,8 @@ dd2=[1]
 id_list2=[1]
 
 def gettoken(refresh_token):
-    headers={'Content-Type':'application/x-www-form-urlencoded'
+    headers={'Content-Type':'application/x-www-form-urlencoded',
+             'Host': 'https://login.microsoftonline.com'
             }
     data={'grant_type': 'refresh_token',
           'refresh_token': refresh_token,
