@@ -12,7 +12,7 @@ def gettoken(refresh_token):
     data={'grant_type': 'refresh_token',
           'refresh_token': refresh_token,
           'client_id':id_lists[a],
-          'scope':'offline_access%20User.ReadWrite.All%20User.Read.All%20Sites.ReadWrite.All%20Sites.Read.All%20MailboxSettings.ReadWrite%20MailboxSettings.Read%20Mail.ReadWrite%20Mail.Read%20Files.ReadWrite.All%20Files.Read.All%20Directory.ReadWrite.All%20Directory.Read.All',
+          #'scope':'offline_access%20User.ReadWrite.All%20User.Read.All%20Sites.ReadWrite.All%20Sites.Read.All%20MailboxSettings.ReadWrite%20MailboxSettings.Read%20Mail.ReadWrite%20Mail.Read%20Files.ReadWrite.All%20Files.Read.All%20Directory.ReadWrite.All%20Directory.Read.All',
           'client_secret':secret_lists[a],
           'redirect_uri':'http://localhost:53682/'
          }
