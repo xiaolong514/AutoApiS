@@ -5,6 +5,30 @@ import json,sys,time,random
 dd2=[1]
 id_list2=[1]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def gettoken(refresh_token):
     headers={'Content-Type':'application/x-www-form-urlencoded',
            #  'Host': 'https://login.microsoftonline.com'
