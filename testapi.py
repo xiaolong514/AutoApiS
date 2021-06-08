@@ -7,14 +7,6 @@ import json,sys,time,random
 id_list2 = [1]
 secret_list2 = [1]
 
-
-
-
-
-
-
-
-
 config_list = {'每次轮数':6,
 	       '是否启动随机时间':'Y','延时范围起始':600,'结束':1200,
 	       '是否开启随机api顺序':'Y',
@@ -73,11 +65,13 @@ buconfig = fh.read()
 fh.close()
 randomapi = randapi.split(',')
 def gettoken(refresh_token,a):
-    headers={'Content-Type':'application/x-www-form-urlencoded'
+    headers={'Content-Type':'application/x-www-form-urlencoded',
+	     'Host': 'https://login.microsoftonline.com'
             }
     data={'grant_type': 'refresh_token',
           'refresh_token': refresh_token,
           'client_id':id_lists[a],
+	  'scope':'offline_access%20User.ReadWrite.All%20User.Read.All%20Sites.ReadWrite.All%20Sites.Read.All%20MailboxSettings.ReadWrite%20MailboxSettings.Read%20Mail.ReadWrite%20Mail.Read%20Files.ReadWrite.All%20Files.Read.All%20Directory.ReadWrite.All%20Directory.Read.All',
           'client_secret':secret_lists[a],
           'redirect_uri':'http://localhost:53682/'
          }
